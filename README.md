@@ -104,7 +104,7 @@ This project is licensed under the MIT License.
 
 ## Acknowledgements
 
-    CodeMirror
+    monaco-editor
     React
     Socket.io
     Express
