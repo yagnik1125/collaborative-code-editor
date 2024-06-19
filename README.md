@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Collaborative Code Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time collaborative code editor built with React and Socket.io. Users can create or join rooms to write code together in real-time. Once the code is written, they can run the code using the provided run button.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Real-time collaborative code editing
+- Room creation and joining functionality
+- Synchronized code changes across all users in the room
+- Code execution feature
+- User-friendly interface
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Socket.io
+- monaco-editor
+- apis - for running the code on hackerearth server
+- Express
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Make sure you have Node.js and npm installed on your machine.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+```bash
+   git clone https://github.com/your-username/collaborative-code-editor.git
+   cd collaborative-code-editor
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install the dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Running the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    #Start the server:
 
-## Learn More
+    ```bash
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm run server
+```
+## Start the client:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
 
-### Code Splitting
+    npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Open your browser and navigate to http://localhost:3000
+```
+## Running Code
 
-### Analyzing the Bundle Size
+    Write your code in the editor.
+    Click the "Run" button to execute the code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##Project Structure
+```
+collaborative-code-editor/
+├── build/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── Client.js
+│   │   ├── Editor.js
+│   │   └── ...
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── EditorPage.js
+│   │   └── ...
+│   ├── App.js
+│   ├── Actions.js
+│   ├── socket.js
+│   └── ...
+├── .gitignore
+├── package.json
+├── server.js
+└── README.md
+```
+## Contributing
 
-### Making a Progressive Web App
+    Fork the repository.
+    Create a new branch: git checkout -b my-feature-branch
+    Make your changes and commit them: git commit -m 'Add some feature'
+    Push to the branch: git push origin my-feature-branch
+    Submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgements
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    CodeMirror
+    React
+    Socket.io
+    Express
