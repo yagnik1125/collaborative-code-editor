@@ -46,12 +46,12 @@ npm install
 
 ## Running the Application
 
-    #Start the server:
+#Start the server:
 
-    ```bash
-
+```bash
 npm run server
 ```
+
 ## Start the client:
 
 ```bash
