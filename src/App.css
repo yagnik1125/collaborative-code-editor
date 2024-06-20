@@ -48,6 +48,7 @@ footer a {
   background: #eee;
   font-size: 16px;
   font-weight: bold;
+  color: black;
 }
 
 .btn {
@@ -58,6 +59,7 @@ footer a {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  color: black;
 }
 
 .btnDiv{
@@ -154,10 +156,10 @@ footer a:hover {
   height: 60px;
 }
 
-.leaveBtn {
+.copybtn {
   width: 100%;
   margin-top: 20px;
-  color: white;
+  background: white;
 }
 .CodeMirror {
   min-height: calc(100vh - 20px);

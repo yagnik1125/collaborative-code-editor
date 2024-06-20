@@ -144,7 +144,7 @@ const EditorPage = () => {
     return (
         <div className="mainWrap">
             <div className="aside">
-                <button className="btn copyBtn" onClick={copyRoomId}>
+                <button className="btn copybtn" onClick={copyRoomId}>
                     Copy Room Id
                 </button>
                 {/* <button className="btn leaveBtn" onClick={leaveRoom}>

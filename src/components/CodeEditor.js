@@ -242,14 +242,14 @@ const CodeEditor = ({ socketRef, roomId, editorRef, onMountEditor }) => {
         <div style={{ flex: 1 }}>
             <div style={{ padding: '10px', background: '#1e1e1e', color: '#fff' }}>
                 <label htmlFor="language" style={{ marginRight: '10px' }}>Select Language: </label>
-                <select id="language" value={language} onChange={handleLanguageChange}>
-                    <option value="--Selecet--" hidden>--Select--</option>
-                    <option value="cpp">C++ 17</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="python">Python</option>
-                    <option value="java">Java</option>
-                    <option value="typescript">TypeScript</option>
-                    <option value="kotlin">Kotlin</option>
+                <select id="language" className='text-black' value={language} onChange={handleLanguageChange}>
+                    <option value="--Selecet--" className='text-black' hidden>--Select--</option>
+                    <option value="cpp" className='text-black'>C++ 17</option>
+                    <option value="javascript" className='text-black'>JavaScript</option>
+                    <option value="python" className='text-black'>Python</option>
+                    <option value="java" className='text-black'>Java</option>
+                    <option value="typescript" className='text-black'>TypeScript</option>
+                    <option value="kotlin" className='text-black'>Kotlin</option>
                     {/* Add more languages as needed */}
                 </select>
                 <button onClick={handleRunClick} style={{ marginLeft: '10px' }}>Run</button>
