@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Editor from "@monaco-editor/react"
-import * as Y from "yjs"
-import { WebrtcProvider } from "y-webrtc"
-import { MonacoBinding } from "y-monaco"
-import * as monaco from 'monaco-editor';
+// import * as Y from "yjs"
+// import { WebrtcProvider } from "y-webrtc"
+// import { MonacoBinding } from "y-monaco"
+// import * as monaco from 'monaco-editor';
 import ACTIONS from '../Actions';
 import axios from 'axios';
 
