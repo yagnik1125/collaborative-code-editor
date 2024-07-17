@@ -14,18 +14,17 @@ const CodeEditor = ({ socketRef, roomId, editorRef, onMountEditor }) => {
     const [language, setLanguage] = useState('--Selecet--');
     const [output, setOutput] = useState('');
     const [input, setInput] = useState('');
-    const [initialcode, setInitialCode] = useState('');
-
+    // const [initialcode, setInitialCode] = useState('');
     const [isEditorReady, setIsEditorReady] = useState(false);
 
-    const defaultCode = {
-        'python': 'print("Hello, World!")',
-        'cpp': '#include <iostream>\nusing namespace std;\nint main() {\n\tcout << "Hello, World!" << endl;\n\treturn 0;\n}',
-        'javascript': 'console.log("Hello, World!");',
-        'kotlin': 'fun main() {\n\tprintln("Hello, World!")\n}',
-        'typescript': 'console.log("Hello, World!");',
-        'java': 'public class HelloWorld {\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println("Hello, World!");\n\t}\n}',
-    }
+    // const defaultCode = {
+    //     'python': 'print("Hello, World!")',
+    //     'cpp': '#include <iostream>\nusing namespace std;\nint main() {\n\tcout << "Hello, World!" << endl;\n\treturn 0;\n}',
+    //     'javascript': 'console.log("Hello, World!");',
+    //     'kotlin': 'fun main() {\n\tprintln("Hello, World!")\n}',
+    //     'typescript': 'console.log("Hello, World!");',
+    //     'java': 'public class HelloWorld {\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println("Hello, World!");\n\t}\n}',
+    // }
 
     function handleEditorDidMount(editor, monaco) {
         editorRef.current = editor;
@@ -61,9 +60,9 @@ const CodeEditor = ({ socketRef, roomId, editorRef, onMountEditor }) => {
         //     // }
         // });
 
-        if (language) {
-            editorRef.current?.getModel().setValue(initialcode);
-        }
+        // if (language) {
+        //     editorRef.current?.getModel().setValue(initialcode);
+        // }
 
         // // Initialize YJS
         // const doc = new Y.Doc(); // a collection of shared objects -> Text
@@ -80,7 +79,6 @@ const CodeEditor = ({ socketRef, roomId, editorRef, onMountEditor }) => {
 
     function handleLanguageChange(event) {
         setLanguage(event.target.value);
-        setInitialCode(defaultCode[event.target.value]);
     }
     function handleInputChange(event) {
         setInput(event.target.value);
@@ -91,6 +89,7 @@ const CodeEditor = ({ socketRef, roomId, editorRef, onMountEditor }) => {
         const code = editorRef.current?.getValue();
         // console.log("code: ",code);
         const apiKey = process.env.REACT_APP_API_KEY;
+        // console.log(apiKey);
 
         const langMap = {
             'python': 'PYTHON',
@@ -126,7 +125,7 @@ const CodeEditor = ({ socketRef, roomId, editorRef, onMountEditor }) => {
             const result1 = response1.data;
             // console.log('result1: ', result1);
             const statusUpdateUrl = result1.status_update_url;
-            console.log(statusUpdateUrl);
+            console.log("statusUpdateUrl:",statusUpdateUrl);
 
             let response2 = await axios.get(`${statusUpdateUrl}`, {
                 headers: {
@@ -259,7 +258,7 @@ const CodeEditor = ({ socketRef, roomId, editorRef, onMountEditor }) => {
                 language={language}
                 theme="vs-dark"
                 // value={initialcode}
-                value={initialcode}
+                value={''}
                 options={{
                     inlineSuggest: true,
                     fontSize: "16px",
